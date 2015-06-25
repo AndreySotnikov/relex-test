@@ -104,6 +104,9 @@ public class Gardener {
         List<Machine> busyMachines = new ArrayList<Machine>();
         List<Machine> availableMachines = new ArrayList<Machine>();
         List<Integer> availableFlowerbeds = new ArrayList<Integer>();
+
+        private int time = 0;
+
         @Override
         public void run() {
             //System.out.println(flowerbeds);
@@ -113,6 +116,7 @@ public class Gardener {
             giveTasks();
             continueOldTasks();
             updateFlowerbeds();
+            time++;
         }
 
         private void clear(){
@@ -156,6 +160,7 @@ public class Gardener {
                 flowerbed = pickFlowerbed(machines.indexOf(availableMachines.get(i)), availableFlowerbeds);
                 if (flowerbed != -1){
                     Machine machine = availableMachines.get(i);
+                    System.out.println("Текущее время: " + time + " минут");
                     System.out.println("Машина " + machine.getIndex() + " поехала от клумбы " + machine.getCurrentPosition() + " к клумбе " + flowerbed);
                     System.out.println("Температура: " + flowerbeds[flowerbed].getTemperatureSensor() +
                             " Влажность: " + flowerbeds[flowerbed].getWetnessSensor());

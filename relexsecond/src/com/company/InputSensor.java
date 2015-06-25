@@ -10,8 +10,6 @@ public class InputSensor {
     private int period;
     @JsonIgnore
     private int position = 0;
-    @JsonIgnore
-    private Flowerbed flowerbed;
 
     public InputSensor(ArrayList<Integer> temperatureSensor, ArrayList<Integer> wetnessSensor, int period) {
         this.temperatureSensor = temperatureSensor;
@@ -54,14 +52,6 @@ public class InputSensor {
 
     public void setPeriod(int period) {
         this.period = period;
-    }
-
-    public Flowerbed getFlowerbed() {
-        return flowerbed;
-    }
-
-    public void setFlowerbed(Flowerbed flowerbed) {
-        this.flowerbed = flowerbed;
     }
 
     @Override

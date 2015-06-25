@@ -1,8 +1,5 @@
 package com.company;
 
-/**
- * Created by andrey on 23.06.15.
- */
 public class InputInfo {
     private int showerTime;
     private int moveTime;

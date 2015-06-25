@@ -28,6 +28,7 @@ public class Gardener {
             flowerbeds[i] = new Flowerbed(inputInfo.getMoveTime()[i], inputInfo.getShowerTime()[i],inputSensor.getTemperatureSensor().get(0), inputSensor.getWetnessSensor().get(0), 0);
         }
 
+        //запуск потока, меняющего значения датчиков у клумб, через определенное время
         new Thread(){
             private int time = 0;
             List<InputSensor> inputSensors = inputAllSensors.getInputSensors();
@@ -61,6 +62,7 @@ public class Gardener {
         timer.schedule(worker, 0, 1000);
     }
 
+    //выбор клумбы для полива
     public int pickFlowerbed() {
         List<Integer> readyToWash = new ArrayList<Integer>();
         for (int i = 0; i < flowerbedCount; i++) {
@@ -75,6 +77,7 @@ public class Gardener {
         return readyToWash.get(new Random().nextInt(readyToWash.size()));
     }
 
+    //обратный отсчет до следующего полива
     public void updateFlowerbeds() {
         for (int i = 0; i < flowerbedCount; i++) {
             if (flowerbeds[i].getRestTime() != 0)
@@ -101,12 +104,14 @@ public class Gardener {
             if (currentFlowerbed != -1) {
                 updateSensors(currentFlowerbed);
             }
+            //если значения температуры нормализовались, то ее не нужно поливать
             if (currentFlowerbed != -1 && criticalTemperatureValue >= temperatureValue && criticalWetnessValue <= wetnessValue) {
                 machine.setFree();
                 System.out.println();
                 System.out.println("Задание отменено [Температура: " + temperatureValue + ", " + "Влажность: " + wetnessValue + "]");
             }
             if (ok && machine.isFree()) {
+                //выдача нового задания
                 currentFlowerbed = pickFlowerbed();
                 if (currentFlowerbed == -1) {
                     ok = false;
@@ -117,10 +122,12 @@ public class Gardener {
                     System.out.println("Машина отправлена к клумбе " + currentFlowerbed);
                     System.out.println("Температура: " + flowerbeds[currentFlowerbed].getTemperatureSensor() +
                             " Влажность: " + flowerbeds[currentFlowerbed].getWetnessSensor());
+                    //переинициализация машины
                     machine.init(flowerbeds[currentFlowerbed].getTimeToMove(), flowerbeds[currentFlowerbed].getTimeToShower());
                     isDone = machine.doWork();
                 }
             } else {
+                //если машина занята, то продолжаем ее работу
                 isDone = machine.doWork();
             }
             if (ok && currentFlowerbed!=-1 && isDone){

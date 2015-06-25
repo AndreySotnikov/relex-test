@@ -18,17 +18,6 @@ public class InputSensor {
         this.period = period;
     }
 
-//    public void update(int index, int time){
-//        if (time % period == 0){
-//            position++;
-//            if (position==temperatureSensor.size())
-//                position=0;
-//            Flowerbed flowerbed = flowerbeds.get(index);
-//            flowerbed.setTemperatureSensor(temperatureSensor.get(position));
-//            flowerbed.setWetnessSensor(wetnessSensor.get(position));
-//        }
-//    }
-
     public void update(Flowerbed flowerbed, int time){
         if (time % period == 0){
             position++;

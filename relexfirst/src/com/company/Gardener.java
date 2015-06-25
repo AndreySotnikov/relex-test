@@ -5,9 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * Created by andrey on 23.06.15.
- */
 public class Gardener {
     private Machine machine;
     private int flowerbedCount;
@@ -51,6 +48,7 @@ public class Gardener {
         return readyToWash.get(new Random().nextInt(readyToWash.size()));
     }
 
+    //обратный отсчет до следующего полива
     public void updateFlowerbeds() {
         for (int i = 0; i < flowerbedCount; i++) {
             if (flowerbeds[i] != 0)
@@ -64,7 +62,6 @@ public class Gardener {
         private int time = 0;
         @Override
         public void run() {
-            //System.out.println(Arrays.toString(flowerbeds));
             boolean ok=true;
             try {
                 updateSensors();
