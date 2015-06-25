@@ -5,9 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.*;
 
-/**
- * Created by andrey on 23.06.15.
- */
+
 public class Gardener {
     private List<Machine> machines;
     private int flowerbedCount;

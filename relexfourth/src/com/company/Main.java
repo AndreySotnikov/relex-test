@@ -46,7 +46,7 @@ public class Main {
         write(inputSensorsValue, json);
         System.out.println("Отредактируйте журнал температур и введите ОК");
         Scanner sc = new Scanner(System.in);
-        while (!sc.next().equals("OK"))
+        while (!sc.next().equalsIgnoreCase("OK"))
             ;
     }
 
