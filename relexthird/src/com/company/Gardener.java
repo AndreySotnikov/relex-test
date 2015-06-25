@@ -118,10 +118,10 @@ public class Gardener {
                     System.out.println("Температура: " + flowerbeds[currentFlowerbed].getTemperatureSensor() +
                             " Влажность: " + flowerbeds[currentFlowerbed].getWetnessSensor());
                     machine.init(flowerbeds[currentFlowerbed].getTimeToMove(), flowerbeds[currentFlowerbed].getTimeToShower());
-                    isDone = machine.dosmth();
+                    isDone = machine.doWork();
                 }
             } else {
-                isDone = machine.dosmth();
+                isDone = machine.doWork();
             }
             if (ok && currentFlowerbed!=-1 && isDone){
                 System.out.println();

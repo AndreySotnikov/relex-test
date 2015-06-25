@@ -15,7 +15,7 @@ public class Machine{
         this.timeToShower = timeToShower;
     }
 
-    public boolean dosmth(){
+    public boolean doWork(){
         if (timeToMove>0) {
             if (printMove==0)
                 System.out.print("Машина едет #");
