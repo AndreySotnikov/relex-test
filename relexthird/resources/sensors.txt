@@ -1,0 +1,23 @@
+{
+  "inputSensors" : [ {
+    "temperatureSensor" : [ 20, 43, 22, 42, 29, 15 ],
+    "wetnessSensor" : [ 64, 73, 50, 97, 66, 45 ],
+    "period" : 6
+  }, {
+    "temperatureSensor" : [ 30, 40, 33, 46, 34, 22 ],
+    "wetnessSensor" : [ 64, 58, 75, 96, 72, 42 ],
+    "period" : 6
+  }, {
+    "temperatureSensor" : [ 33, 49, 20, 25, 27, 29 ],
+    "wetnessSensor" : [ 60, 85, 64, 81, 71, 54 ],
+    "period" : 5
+  }, {
+    "temperatureSensor" : [ 27, 59, 21, 13, 25, 33 ],
+    "wetnessSensor" : [ 69, 80, 62, 94, 64, 58 ],
+    "period" : 3
+  }, {
+    "temperatureSensor" : [ 32, 56, 22, 13, 32, 22 ],
+    "wetnessSensor" : [ 65, 56, 74, 87, 78, 44 ],
+    "period" : 3
+  } ]
+}

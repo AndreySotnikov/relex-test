@@ -1,0 +1,7 @@
+{
+  "inputSensors" : [ {
+    "temperatureSensor" : [ 29, 56, 34, 29, 29, 23 ],
+    "wetnessSensor" : [ 75, 60, 78, 82, 60, 45 ],
+    "period" : 2
+  } ]
+}
