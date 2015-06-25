@@ -10,7 +10,7 @@ public class InputSensor {
     private int period;
     @JsonIgnore
     private int position = 0;
-
+    @JsonIgnore
     private Flowerbed flowerbed;
 
     public InputSensor(ArrayList<Integer> temperatureSensor, ArrayList<Integer> wetnessSensor, int period) {

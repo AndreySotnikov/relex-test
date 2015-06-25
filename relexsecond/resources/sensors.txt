@@ -2,37 +2,30 @@
   "inputSensors" : [ {
     "temperatureSensor" : [ 25, 30, 35, 50, 25, 60 ],
     "wetnessSensor" : [ 80, 75, 70, 80, 40, 60 ],
-    "period" : 3,
-    "flowerbed" : null
+    "period" : 3
   }, {
     "temperatureSensor" : [ 25, 30, 35, 50, 25, 60 ],
     "wetnessSensor" : [ 80, 75, 70, 80, 40, 60 ],
-    "period" : 3,
-    "flowerbed" : null
+    "period" : 3
   }, {
     "temperatureSensor" : [ 25, 30, 35, 50, 25, 60 ],
     "wetnessSensor" : [ 80, 75, 70, 80, 40, 60 ],
-    "period" : 3,
-    "flowerbed" : null
+    "period" : 3
   }, {
     "temperatureSensor" : [ 25, 30, 35, 50, 25, 60 ],
     "wetnessSensor" : [ 80, 75, 70, 80, 40, 60 ],
-    "period" : 3,
-    "flowerbed" : null
+    "period" : 3
   }, {
     "temperatureSensor" : [ 25, 30, 35, 50, 25, 60 ],
     "wetnessSensor" : [ 80, 75, 70, 80, 40, 60 ],
-    "period" : 3,
-    "flowerbed" : null
+    "period" : 3
   }, {
     "temperatureSensor" : [ 25, 30, 35, 50, 25, 60 ],
     "wetnessSensor" : [ 80, 75, 70, 80, 40, 60 ],
-    "period" : 3,
-    "flowerbed" : null
+    "period" : 3
   }, {
     "temperatureSensor" : [ 25, 30, 35, 50, 25, 60 ],
     "wetnessSensor" : [ 80, 75, 70, 80, 40, 60 ],
-    "period" : 3,
-    "flowerbed" : null
+    "period" : 3
   } ]
 }
