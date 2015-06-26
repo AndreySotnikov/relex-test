@@ -19,7 +19,7 @@ public class Machine extends Thread{
         currentPosition = 0;
     }
 
-    public boolean dosmth(){
+    public boolean doWork(){
         if (timeToMove>0) {
             System.out.println("Машина " + index + " едет к клумбе " + target + ", осталось " + timeToMove + " минут");
             if (target<currentPosition)

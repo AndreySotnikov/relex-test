@@ -47,8 +47,7 @@ public class Gardener {
 
             @Override
             public void run(){
-                //for (int i = 0; i < inputSensors.size(); i++)
-                //  inputSensors.get(i).setFlowerbed(flowerbeds[i]);
+
                 while(true){
                     try {
                         update();
@@ -109,7 +108,6 @@ public class Gardener {
 
         @Override
         public void run() {
-            //System.out.println(flowerbeds);
             clear();
             groupMachines();
             flowerbedsForWashing();
@@ -166,7 +164,7 @@ public class Gardener {
                             " Влажность: " + flowerbeds[flowerbed].getWetnessSensor());
                     int timeToMove = distances[flowerbed][machine.getCurrentPosition()];
                     machine.init(timeToMove, flowerbeds[flowerbed].getTimeToShower(), flowerbed);
-                    machine.dosmth();
+                    machine.doWork();
                 }
                 else
                     break;
@@ -176,7 +174,7 @@ public class Gardener {
         //продолжение работы остальных машин
         private void continueOldTasks() {
             for (int i=0; i<busyMachines.size(); i++) {
-                if (busyMachines.get(i).dosmth()){
+                if (busyMachines.get(i).doWork()){
                     Flowerbed tmpflowerbed = flowerbeds[busyMachines.get(i).getTarget()];
                     tmpflowerbed.setWaiting(false);
                     tmpflowerbed.setRestTime(restTime);

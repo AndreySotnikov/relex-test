@@ -78,10 +78,10 @@ public class Gardener {
                         System.out.println("Текущее время: " + time + " минут");
                         System.out.println("Машина отправлена к клумбе " + currentFlowerbed);
                         machine.init(moveTime, showerTime);
-                        isDone = machine.dosmth();
+                        isDone = machine.doWork();
                     }
                 } else {
-                    isDone = machine.dosmth();
+                    isDone = machine.doWork();
                 }
                 if (ok && isDone)
                     flowerbeds[currentFlowerbed] = restTime;

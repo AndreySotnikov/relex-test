@@ -45,8 +45,6 @@ public class Gardener {
 
             @Override
             public void run(){
-                //for (int i = 0; i < inputSensors.size(); i++)
-                //  inputSensors.get(i).setFlowerbed(flowerbeds[i]);
                 while(true){
                     try {
                         update();

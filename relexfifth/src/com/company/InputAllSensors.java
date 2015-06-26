@@ -3,9 +3,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by andrey on 23.06.15.
- */
 public class InputAllSensors {
     private List<InputSensor> inputSensors;
 
